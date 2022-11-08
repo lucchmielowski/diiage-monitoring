@@ -50,6 +50,10 @@
               "target": "Package",
               "version": "[1.4.0-beta.2, )"
             },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs": {
+              "target": "Package",
+              "version": "[1.4.0-beta.2, )"
+            },
             "OpenTelemetry.Exporter.Prometheus.AspNetCore": {
               "target": "Package",
               "version": "[1.4.0-beta.2, )"

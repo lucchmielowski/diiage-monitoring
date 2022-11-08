@@ -404,6 +404,23 @@
           }
         }
       },
+      "OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs/1.4.0-beta.2": {
+        "type": "package",
+        "dependencies": {
+          "OpenTelemetry": "1.4.0-beta.2",
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.4.0-beta.2"
+        },
+        "compile": {
+          "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "OpenTelemetry.Exporter.Prometheus.AspNetCore/1.4.0-beta.2": {
         "type": "package",
         "dependencies": {
@@ -1259,6 +1276,24 @@
         "opentelemetry.exporter.opentelemetryprotocol.nuspec"
       ]
     },
+    "OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs/1.4.0-beta.2": {
+      "sha512": "SsT+rnm3592kqHmgs2zGH8lpY9fgbBWP0ISzrcvXEQlob3hmhfab7u5Y6s4aTnSStIdzb938/ycM5dBF+S+3CQ==",
+      "type": "package",
+      "path": "opentelemetry.exporter.opentelemetryprotocol.logs/1.4.0-beta.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll",
+        "lib/net462/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.xml",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll",
+        "lib/netstandard2.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.xml",
+        "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll",
+        "lib/netstandard2.1/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.xml",
+        "opentelemetry-icon-color.png",
+        "opentelemetry.exporter.opentelemetryprotocol.logs.1.4.0-beta.2.nupkg.sha512",
+        "opentelemetry.exporter.opentelemetryprotocol.logs.nuspec"
+      ]
+    },
     "OpenTelemetry.Exporter.Prometheus.AspNetCore/1.4.0-beta.2": {
       "sha512": "E/eUrm+2GxOs7Q9ure5xKyK3oyXjKFq/Ach8v9PG/sRrgc3g8SRSSUHjWlezxofXNmnaKcaXpMD0PiOhqp2uQw==",
       "type": "package",
@@ -1495,6 +1530,7 @@
       "Microsoft.AspNetCore.OpenApi >= 7.0.0-rc.2.22476.2",
       "OpenTelemetry.Exporter.Console >= 1.3.1",
       "OpenTelemetry.Exporter.OpenTelemetryProtocol >= 1.4.0-beta.2",
+      "OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs >= 1.4.0-beta.2",
       "OpenTelemetry.Exporter.Prometheus.AspNetCore >= 1.4.0-beta.2",
       "OpenTelemetry.Extensions.Hosting >= 1.0.0-rc9.8",
       "OpenTelemetry.Instrumentation.AspNetCore >= 1.0.0-rc9.8",
@@ -1549,6 +1585,10 @@
             "version": "[1.3.1, )"
           },
           "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+            "target": "Package",
+            "version": "[1.4.0-beta.2, )"
+          },
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs": {
             "target": "Package",
             "version": "[1.4.0-beta.2, )"
           },

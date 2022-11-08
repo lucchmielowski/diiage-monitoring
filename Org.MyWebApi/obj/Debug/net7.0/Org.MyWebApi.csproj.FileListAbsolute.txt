@@ -44,3 +44,4 @@
 /Users/lucchemielowski/Perso/monitoring-diiage/Org.MyWebApi/bin/Debug/net7.0/OpenTelemetry.Instrumentation.Http.dll
 /Users/lucchemielowski/Perso/monitoring-diiage/Org.MyWebApi/bin/Debug/net7.0/OpenTelemetry.Exporter.Prometheus.AspNetCore.dll
 /Users/lucchemielowski/Perso/monitoring-diiage/Org.MyWebApi/bin/Debug/net7.0/OpenTelemetry.Instrumentation.Runtime.dll
+/Users/lucchemielowski/Perso/monitoring-diiage/Org.MyWebApi/bin/Debug/net7.0/OpenTelemetry.Exporter.OpenTelemetryProtocol.Logs.dll

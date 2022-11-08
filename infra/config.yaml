@@ -1,0 +1,65 @@
+apiVersion: opentelemetry.io/v1alpha1
+kind: OpenTelemetryCollector
+metadata:
+  name: jaeger-prometheus-logging
+  namespace: observability
+spec:
+  image: "otel/opentelemetry-collector-contrib:0.63.1"
+  ports:
+  - port: 8889
+    protocol: TCP
+    name: "prometheus"
+  config: |
+    receivers:
+      otlp:
+        protocols:
+          grpc:
+          http:
+
+    processors:
+      memory_limiter:
+        check_interval: 1s
+        limit_percentage: 75
+        spike_limit_percentage: 15
+      batch:
+        send_batch_size: 10000
+        timeout: 10s
+
+    extensions:
+      health_check:
+
+    exporters:
+      logging:
+
+      loki:
+        endpoint: http://loki:3100/loki/api/v1/push
+        tls:
+          insecure: true
+        labels:
+          attributes:
+            container_name: ""
+            container_id: ""
+
+      jaeger:
+        endpoint: simplest-collector.observability:14250
+        tls:
+          insecure: true
+
+      prometheus:
+        endpoint: "0.0.0.0:8889"
+
+
+    service:
+      pipelines:
+        traces:
+          receivers: [otlp]
+          processors: [batch]
+          exporters: [logging, jaeger]
+        logs:
+          receivers: [otlp]
+          processors: [batch]
+          exporters: [logging, loki]
+        metrics:
+          receivers: [otlp]
+          processors: [batch]
+          exporters: [logging, prometheus]
